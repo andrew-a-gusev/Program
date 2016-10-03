@@ -19,6 +19,17 @@ public class Calculator {
     private Operator getOperator(String input) {
         String str = input;
         for (int i=0; i < str.length(); i++) {
+            /**
+             * Major:
+             *   1. Very good in general
+             *   2. Please, think of how to add new operator WITHOUT modifing a single line of getOperator code
+             * Minor:
+             * it is an overcomplicaition 
+             *  switch(input.chatAt(i)) {... } 
+             *  OR
+             *  if ('+' ...) {} else if ('-'...) ... 
+             *  would be enough
+             */
             if (('+' == input.charAt(i)) | ('-' == input.charAt(i)) |
                     (input.charAt(i) == '*') | (input.charAt(i) == '/')) {
                 char s = input.charAt(i);
